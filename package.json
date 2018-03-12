@@ -1,0 +1,18 @@
+{
+  "name": "angular-weather",
+  "version": "1.0.0",
+  "description": "A single page angular application fetching data from Open Weather API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Austin Lauritsen <austin@veryaustin.com> (http://veryaustin.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.4.14",
+    "angular-animate": "^1.4.14",
+    "angular-aria": "^1.4.14",
+    "angular-material": "^1.1.7",
+    "angular-messages": "^1.4.14"
+  }
+}
