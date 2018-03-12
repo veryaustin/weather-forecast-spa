@@ -2,11 +2,11 @@
 app.config(function($routeProvider) {
   $routeProvider
     .when("/", {
-      templateUrl: "pages/home.html",
+      templateUrl: "app/pages/home.html",
       controller: "homeController"
     })
     .when("/forecast", {
-      templateUrl: "pages/forecast.html",
+      templateUrl: "app/pages/forecast.html",
       controller: "forecastController"
     });
 });
