@@ -1,8 +1,5 @@
-var app = angular.module("app", ["ngMaterial"]);
+var app = angular.module("app", ["ngMaterial", "ngRoute"]);
 
-app.controller("homeController", [
-  "$scope",
-  function($scope) {
-    $scope.city = "Nashville";
-  }
-]);
+app.controller("homeController", ["$scope", function($scope) {}]);
+
+app.controller("forecastController", ["$scope", function($scope) {}]);
