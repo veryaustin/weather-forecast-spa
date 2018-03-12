@@ -1,18 +1,15 @@
 <md-content layout-padding>
-  <form name="projectForm">
-
+  <form name="cityForm" ng-submit="submit()">
     <md-input-container class="md-block">
       <label>City</label>
-      <input md-maxlength="20" required name="description" ng-model="project.description">
-      <div ng-messages="projectForm.description.$error">
+      <input md-maxlength="20" required name="city" ng-model="city">
+      <div ng-messages="cityForm.city.$error">
         <div ng-message="required">This is required.</div>
         <div ng-message="md-maxlength">The city must be less than 20 characters long.</div>
       </div>
     </md-input-container>
-
     <div>
-      <md-button type="submit" class="md-raised md-primary">Submit</md-button>
+      <md-button type="submit" class="md-raised md-primary">Get Forecast</md-button>
     </div>
-
   </form>
 </md-content>

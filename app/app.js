@@ -1,8 +1,34 @@
 var app = angular.module("app", ["ngMaterial", "ngRoute", "ngMessages"]);
 
-app.controller("homeController", ["$scope", function($scope) {}]);
+app.controller("homeController", [
+  "$scope",
+  "$location",
+  "cityService",
+  function($scope, $location, cityService) {
+    $scope.city = cityService.city;
 
-app.controller("forecastController", ["$scope", function($scope) {}]);
+    $scope.$watch("city", function() {
+      cityService.city = $scope.city;
+    });
+
+    $scope.submit = function() {
+      $location.path("/forecast");
+    };
+  }
+]);
+
+app.controller("forecastController", [
+  "$scope",
+  "cityService",
+  function($scope, cityService) {
+    $scope.city = cityService.city;
+  }
+]);
+
+// Services
+app.service("cityService", function() {
+  this.city = "";
+});
 
 // Directives
 app.directive("appNav", function() {
