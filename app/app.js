@@ -1,1 +1,6 @@
-var app = angular.module("app", ["ngMaterial", "ngRoute", "ngMessages"]);
+var app = angular.module("app", [
+  "ngMaterial",
+  "ngRoute",
+  "ngMessages",
+  "ngResource"
+]);

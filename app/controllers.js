@@ -18,8 +18,25 @@ app.controller("homeController", [
 
 app.controller("forecastController", [
   "$scope",
+  "$routeParams",
+  "$resource",
   "cityService",
-  function($scope, cityService) {
+  "weatherApi",
+  function($scope, $routeParams, $resource, cityService, weatherApi) {
     $scope.city = cityService.city;
+
+    $scope.days = $routeParams.days || "2";
+
+    $scope.weatherAPI = $resource(
+      "http://api.openweathermap.org/data/2.5/forecast/daily",
+      { callback: "JSON_CALLBACK" },
+      { get: { method: "JSONP" } }
+    );
+
+    $scope.weatherResult = $scope.weatherAPI.get({
+      appid: weatherApi.appKey,
+      q: $scope.city,
+      cnt: $scope.days
+    });
   }
 ]);
