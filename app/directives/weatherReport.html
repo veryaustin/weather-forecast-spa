@@ -1,6 +1,6 @@
 <md-list-item class="md-2-line">
   <div class="md-list-item-text" layout="column">
-    <h3>{{ convertDate({ dt: weatherDay.dt }) }}</h3>
+    <h3>{{ convertDate({ dt: weatherDay.dt }) | date: dateFormat }}</h3>
     <p>Daytime Temperature: {{ convertTemp({temp: weatherDay.temp.day}) }}&deg; F</p>
     <!-- <p>{{weatherDay.temp.day}}</p> -->
   </div>

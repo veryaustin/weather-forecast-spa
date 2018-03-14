@@ -16,6 +16,7 @@ app.directive("weatherReport", function() {
     scope: {
       weatherDay: "=",
       convertDate: "&",
+      dateFormat: "@",
       convertTemp: "&"
     }
   };
