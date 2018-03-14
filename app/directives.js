@@ -7,3 +7,15 @@ app.directive("appNav", function() {
     scope: {}
   };
 });
+
+app.directive("weatherReport", function() {
+  return {
+    restrict: "E",
+    templateUrl: "app/directives/weatherReport.html",
+    replace: true,
+    scope: {
+      weatherDay: "=",
+      convertDate: "&"
+    }
+  };
+});

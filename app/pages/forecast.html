@@ -1,1 +1,3 @@
-The City is: {{city}}
+<md-list ng-repeat="w in weatherResult.list" flex>
+  <weather-report weather-day="w" convert-date="convertDate(dt)"></weather-report>
+</md-list>

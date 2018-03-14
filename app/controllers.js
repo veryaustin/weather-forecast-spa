@@ -38,5 +38,9 @@ app.controller("forecastController", [
       q: $scope.city,
       cnt: $scope.days
     });
+
+    $scope.convertDate = function(dt) {
+      return new Date(dt * 1000);
+    };
   }
 ]);

@@ -5,6 +5,7 @@ app.config(function($routeProvider) {
       templateUrl: "app/pages/home.html",
       controller: "homeController"
     })
+
     .when("/forecast", {
       templateUrl: "app/pages/forecast.html",
       controller: "forecastController"
