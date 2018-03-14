@@ -42,5 +42,9 @@ app.controller("forecastController", [
     $scope.convertDate = function(dt) {
       return new Date(dt * 1000);
     };
+
+    $scope.convertToFahrenheit = function(degK) {
+      return Math.round(1.8 * (degK - 273) + 32);
+    };
   }
 ]);

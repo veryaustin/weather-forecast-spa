@@ -9,5 +9,10 @@ app.config(function($routeProvider) {
     .when("/forecast", {
       templateUrl: "app/pages/forecast.html",
       controller: "forecastController"
+    })
+
+    .when("/forecast/:days", {
+      templateURL: "app/pages/forecast.html",
+      controller: "forecastController"
     });
 });

@@ -15,7 +15,8 @@ app.directive("weatherReport", function() {
     replace: true,
     scope: {
       weatherDay: "=",
-      convertDate: "&"
+      convertDate: "&",
+      convertTemp: "&"
     }
   };
 });

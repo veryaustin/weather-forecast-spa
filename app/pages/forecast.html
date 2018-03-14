@@ -1,3 +1,3 @@
 <md-list ng-repeat="w in weatherResult.list" flex>
-  <weather-report weather-day="w" convert-date="convertDate(dt)"></weather-report>
+  <weather-report weather-day="w" convert-date="convertDate(dt)" convert-temp="convertToFahrenheit(temp)"></weather-report>
 </md-list>
