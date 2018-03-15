@@ -1,8 +1,8 @@
 // Services
 app.service("cityService", function() {
-  this.city = "";
+  this.city = "New York";
 });
 
-app.service("weatherApi", function() {
+app.service("weatherKey", function() {
   this.appKey = "";
 });

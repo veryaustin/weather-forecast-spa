@@ -21,8 +21,8 @@ app.controller("forecastController", [
   "$routeParams",
   "$resource",
   "cityService",
-  "weatherApi",
-  function($scope, $routeParams, $resource, cityService, weatherApi) {
+  "weatherKey",
+  function($scope, $routeParams, $resource, cityService, weatherKey) {
     $scope.city = cityService.city;
 
     $scope.days = $routeParams.days || "2";
@@ -34,7 +34,7 @@ app.controller("forecastController", [
     );
 
     $scope.weatherResult = $scope.weatherAPI.get({
-      appid: weatherApi.appKey,
+      appid: weatherKey.appKey,
       q: $scope.city,
       cnt: $scope.days
     });
